@@ -14,6 +14,7 @@
 		6FD4686123BC1B8200DE1228 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FD4686023BC1B8200DE1228 /* Preview Assets.xcassets */; };
 		6FD4686423BC1B8200DE1228 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FD4686223BC1B8200DE1228 /* LaunchScreen.storyboard */; };
 		6FD4686F23BC1B8300DE1228 /* NReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD4686E23BC1B8300DE1228 /* NReaderTests.swift */; };
+		6FD4687F23BC257F00DE1228 /* Kanna.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD4687E23BC257F00DE1228 /* Kanna.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		6FD4686A23BC1B8300DE1228 /* NReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NReaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FD4686E23BC1B8300DE1228 /* NReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NReaderTests.swift; sourceTree = "<group>"; };
 		6FD4687023BC1B8300DE1228 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6FD4687E23BC257F00DE1228 /* Kanna.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kanna.framework; path = Carthage/Build/iOS/Kanna.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FD4687F23BC257F00DE1228 /* Kanna.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +67,7 @@
 				6FD4685623BC1B7D00DE1228 /* NReader */,
 				6FD4686D23BC1B8300DE1228 /* NReaderTests */,
 				6FD4685523BC1B7D00DE1228 /* Products */,
+				6FD4687D23BC257F00DE1228 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +111,14 @@
 			path = NReaderTests;
 			sourceTree = "<group>";
 		};
+		6FD4687D23BC257F00DE1228 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6FD4687E23BC257F00DE1228 /* Kanna.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -116,6 +128,7 @@
 			buildPhases = (
 				6FD4685023BC1B7D00DE1228 /* Sources */,
 				6FD4685123BC1B7D00DE1228 /* Frameworks */,
+				6FD4688023BC258A00DE1228 /* Run Script (Carthage) */,
 				6FD4685223BC1B7D00DE1228 /* Resources */,
 			);
 			buildRules = (
@@ -202,6 +215,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6FD4688023BC258A00DE1228 /* Run Script (Carthage) */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Kanna.framework",
+			);
+			name = "Run Script (Carthage)";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6FD4685023BC1B7D00DE1228 /* Sources */ = {
@@ -366,6 +401,11 @@
 				DEVELOPMENT_ASSET_PATHS = "\"NReader/Preview Content\"";
 				DEVELOPMENT_TEAM = TDK24MYJKX;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = NReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -386,6 +426,11 @@
 				DEVELOPMENT_ASSET_PATHS = "\"NReader/Preview Content\"";
 				DEVELOPMENT_TEAM = TDK24MYJKX;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = NReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
