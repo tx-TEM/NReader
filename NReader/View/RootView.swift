@@ -26,17 +26,17 @@ struct RootView: View {
                 })
             }
             .tabItem {
-                Image(systemName: "1.square.fill")
+                Image(systemName: "house")
                 Text("Home")
             }
             Text("Ranking Tab")
                 .tabItem {
-                    Image(systemName: "2.square.fill")
+                    Image(systemName: "list.number")
                     Text("Ranking")
                 }
             Text("History Tab")
                 .tabItem {
-                    Image(systemName: "3.square.fill")
+                    Image(systemName: "clock")
                     Text("History")
                 }
         }
