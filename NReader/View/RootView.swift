@@ -2,34 +2,14 @@ import SwiftUI
 import Combine
 
 struct RootView: View {
-    @State private var subscriptions = Set<AnyCancellable>()
-
     var body: some View {
         TabView {
-            VStack {
-                Text("Home Tab")
-                Button(action: {
-                    NarouAPI.novelListRequest(sortOption: .hyoka)
-                    .sink(receiveCompletion: { completion in
-                        switch completion {
-                            case .finished:
-                                print("finish")
-                            case .failure(let error):
-                                print(error)
-                        }
-                    }, receiveValue: { response in
-                        print(response)
-                    })
-                    .store(in: &self.subscriptions)
-                }, label: {
-                    Text("Tap")
-                })
-            }
+            Text("Home Tab")
             .tabItem {
                 Image(systemName: "house")
                 Text("Home")
             }
-            Text("Ranking Tab")
+            RankingView()
                 .tabItem {
                     Image(systemName: "list.number")
                     Text("Ranking")

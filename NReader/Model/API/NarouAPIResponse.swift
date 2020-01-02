@@ -1,6 +1,6 @@
 import Foundation
 
-struct NovelInfo: Codable {
+struct NovelInfo: Codable, Equatable {
     var title: String
     var ncode: String
     var userid: Int
@@ -18,6 +18,10 @@ struct NovelInfo: Codable {
         case story
         case generalLastup
         case globalPoint
+    }
+
+    public static func == (lhs: NovelInfo, rhs: NovelInfo) -> Bool {
+        lhs.ncode == rhs.ncode
     }
 }
 
