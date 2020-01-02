@@ -8,18 +8,17 @@ struct RankingView: View {
     }
 
     var body: some View {
-
-        VStack(alignment: .leading, spacing: 0) {
-            ScrollView {
-                VStack(alignment: .leading, spacing: 0) {
-                    Color.blue.frame(height: 64)
-
-                    ForEach(viewModel.novelInfoList, id: \.ncode) { novelInfo in
-                        NovelCell(rank: self.rank(item: novelInfo), novelInfo: novelInfo)
+        NavigationView {
+            VStack(alignment: .leading, spacing: 0) {
+                ScrollView {
+                    VStack(alignment: .leading, spacing: 0) {
+                        ForEach(viewModel.novelInfoList, id: \.ncode) { novelInfo in
+                            NovelCell(rank: self.rank(item: novelInfo), novelInfo: novelInfo)
+                        }
                     }
+                    .frame(maxWidth: .infinity)
                 }
-                .frame(maxWidth: .infinity)
-            }
+            }.navigationBarTitle("ランキング", displayMode: .inline)
         }
     }
 
