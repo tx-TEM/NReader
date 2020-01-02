@@ -23,7 +23,7 @@ struct RankingView: View {
     }
 
     private func rank(item: NovelInfo) -> Int {
-        return viewModel.novelInfoList.firstIndex(of: item) ?? 0
+        return (viewModel.novelInfoList.firstIndex(of: item) ?? -1) + 1
     }
 }
 

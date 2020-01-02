@@ -11,7 +11,7 @@ final class RankingViewModel: ObservableObject {
 
     private func load(sortOption: NarouSortOption) {
         NarouAPI
-            .novelListRequest(sortOption: sortOption, limit: 101)
+            .novelListRequest(sortOption: sortOption, limit: 100)
             .sink(receiveCompletion: { _ in
             }, receiveValue: { response in
                 self.novelInfoList = response.novelInfoList
