@@ -87,13 +87,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6FA9081023BD85F600CC0AE8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6FD4685B23BC1B7D00DE1228 /* RootView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6FA9081123BD862100CC0AE8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6FA9081223BD862A00CC0AE8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		6FD4684B23BC1B7D00DE1228 = {
 			isa = PBXGroup;
 			children = (
+				6FD4687D23BC257F00DE1228 /* Frameworks */,
 				6FD4685623BC1B7D00DE1228 /* NReader */,
 				6FD4686D23BC1B8300DE1228 /* NReaderTests */,
 				6FD4685523BC1B7D00DE1228 /* Products */,
-				6FD4687D23BC257F00DE1228 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,13 +131,15 @@
 		6FD4685623BC1B7D00DE1228 /* NReader */ = {
 			isa = PBXGroup;
 			children = (
-				6FD4685723BC1B7D00DE1228 /* AppDelegate.swift */,
-				6FD4685923BC1B7D00DE1228 /* SceneDelegate.swift */,
-				6FD4685B23BC1B7D00DE1228 /* RootView.swift */,
-				6FD4685D23BC1B8200DE1228 /* Assets.xcassets */,
-				6FD4686223BC1B8200DE1228 /* LaunchScreen.storyboard */,
-				6FD4686523BC1B8200DE1228 /* Info.plist */,
+				6FA9081123BD862100CC0AE8 /* Model */,
+				6FA9081023BD85F600CC0AE8 /* View */,
+				6FA9081223BD862A00CC0AE8 /* ViewModel */,
 				6FD4685F23BC1B8200DE1228 /* Preview Content */,
+				6FD4685723BC1B7D00DE1228 /* AppDelegate.swift */,
+				6FD4685D23BC1B8200DE1228 /* Assets.xcassets */,
+				6FD4686523BC1B8200DE1228 /* Info.plist */,
+				6FD4686223BC1B8200DE1228 /* LaunchScreen.storyboard */,
+				6FD4685923BC1B7D00DE1228 /* SceneDelegate.swift */,
 			);
 			path = NReader;
 			sourceTree = "<group>";
@@ -131,8 +155,8 @@
 		6FD4686D23BC1B8300DE1228 /* NReaderTests */ = {
 			isa = PBXGroup;
 			children = (
-				6FD4686E23BC1B8300DE1228 /* NReaderTests.swift */,
 				6FD4687023BC1B8300DE1228 /* Info.plist */,
+				6FD4686E23BC1B8300DE1228 /* NReaderTests.swift */,
 			);
 			path = NReaderTests;
 			sourceTree = "<group>";
@@ -307,6 +331,7 @@
 				6FD4686323BC1B8200DE1228 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
