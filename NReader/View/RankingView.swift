@@ -18,7 +18,9 @@ struct RankingView: View {
                     }
                     .frame(maxWidth: .infinity)
                 }
-            }.navigationBarTitle("ランキング", displayMode: .inline)
+            }
+            .navigationBarTitle("ランキング", displayMode: .inline)
+            .navigationBarItems(trailing: Image(systemName: "arrow.up.arrow.down"))
         }
     }
 
@@ -40,7 +42,9 @@ private struct NovelCell: View {
 
                 Text(novelInfo.title)
             }
-        }.padding(.all, 16)
+        }
+        .padding(.leading, 16)
+        .padding(.top, 24)
     }
 }
 
