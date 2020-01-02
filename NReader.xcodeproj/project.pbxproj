@@ -15,6 +15,7 @@
 		6FD4686423BC1B8200DE1228 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FD4686223BC1B8200DE1228 /* LaunchScreen.storyboard */; };
 		6FD4686F23BC1B8300DE1228 /* NReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD4686E23BC1B8300DE1228 /* NReaderTests.swift */; };
 		6FD4687F23BC257F00DE1228 /* Kanna.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD4687E23BC257F00DE1228 /* Kanna.framework */; };
+		6FD4688623BD71A500DE1228 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD4688523BD71A500DE1228 /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		6FD4686E23BC1B8300DE1228 /* NReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NReaderTests.swift; sourceTree = "<group>"; };
 		6FD4687023BC1B8300DE1228 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6FD4687E23BC257F00DE1228 /* Kanna.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kanna.framework; path = Carthage/Build/iOS/Kanna.framework; sourceTree = "<group>"; };
+		6FD4688523BD71A500DE1228 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FD4688623BD71A500DE1228 /* Alamofire.framework in Frameworks */,
 				6FD4687F23BC257F00DE1228 /* Kanna.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -114,6 +117,7 @@
 		6FD4687D23BC257F00DE1228 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6FD4688523BD71A500DE1228 /* Alamofire.framework */,
 				6FD4687E23BC257F00DE1228 /* Kanna.framework */,
 			);
 			name = Frameworks;
@@ -226,6 +230,7 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Kanna.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 			);
 			name = "Run Script (Carthage)";
 			outputFileListPaths = (
